@@ -1,19 +1,58 @@
+# FastAPI Core
 fastapi==0.108.0
 uvicorn[standard]==0.25.0
 gunicorn==21.2.0
+
+# Data Validation & Settings
 pydantic==2.5.2
 pydantic-settings==2.1.0
-sqlalchemy==2.0.25
-alembic==1.13.1
+
+# Database (Async SQLAlchemy)
+sqlalchemy[asyncio]==2.0.25
 asyncpg==0.29.0
+aiosqlite==0.19.0  # For SQLite testing
+alembic==1.13.1
+
+# Redis & Caching
 redis==5.0.1
+aioredis==2.0.1
+
+# Authentication & Security
 python-jose[cryptography]==3.3.0
 passlib[bcrypt]==1.7.4
 python-multipart==0.0.6
+
+# Rate Limiting
 slowapi==0.1.9
+
+# Monitoring & Observability
 prometheus-client==0.19.0
 structlog==23.2.0
-ddtrace==2.5.0
+
+# HTTP Client (for external APIs)
+httpx==0.26.0
+
+# Development & Testing
 pytest==7.4.4
 pytest-asyncio==0.23.2
-httpx==0.26.0
+pytest-cov==4.1.0
+
+# Datadog APM (Optional)
+ddtrace==2.5.0
+
+# Additional Production Dependencies
+psutil==5.9.6  # System monitoring
+python-dateutil==2.8.2  # Date utilities
+email-validator==2.1.0  # Email validation
+phonenumbers==8.13.27  # Phone number validation
+pillow==10.1.0  # Image processing
+python-magic==0.4.27  # File type detection
+
+# Development Tools (optional, for local development)
+black==23.12.1
+ruff==0.1.9
+mypy==1.8.0
+pre-commit==3.6.0
+
+# Production WSGI Server Alternative
+hypercorn[trio]==0.16.0  # ASGI server alternative to uvicorn
