@@ -227,6 +227,14 @@ async def refresh_token(request: Request, refresh_token: str):
     return {"access_token": new_access_token, "token_type": "bearer"}
 
 
+# Include music routes
+try:
+    from routes.music import router as music_router
+    app.include_router(music_router)
+except ImportError as e:
+    logger.warning("music_routes_not_loaded", error=str(e))
+
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)

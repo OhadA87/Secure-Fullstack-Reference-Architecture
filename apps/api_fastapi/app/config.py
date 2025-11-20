@@ -56,6 +56,13 @@ class Settings(BaseSettings):
     # Security
     BCRYPT_ROUNDS: int = Field(default=12, description="Bcrypt rounds for password hashing")
     
+    # AWS Configuration
+    AWS_ACCESS_KEY_ID: str = Field(default="", description="AWS access key ID")
+    AWS_SECRET_ACCESS_KEY: str = Field(default="", description="AWS secret access key")
+    AWS_REGION: str = Field(default="us-east-1", description="AWS region")
+    S3_BUCKET_NAME: str = Field(default="spotify-clone-audio", description="S3 bucket for audio files")
+    CLOUDFRONT_DOMAIN: str = Field(default="", description="CloudFront domain for CDN")
+
     # Datadog (optional)
     DD_TRACE_ENABLED: bool = Field(default=False, description="Enable Datadog tracing")
     DD_SERVICE: str = Field(default="spotify-clone-api", description="Datadog service name")
