@@ -72,4 +72,4 @@ Full-stack Spotify clone with Flutter frontend, FastAPI backend, and AWS infrast
 
 ## Security
 
-See [SECURITY.md](./SECURITY.md) for security policies and reporting.
+See [SECURITY.md](./SECURITY.md) for security policies.
