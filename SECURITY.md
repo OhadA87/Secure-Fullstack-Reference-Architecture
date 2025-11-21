@@ -1,17 +1,5 @@
 # Security Policy
 
-## Reporting Security Vulnerabilities
-
-**DO NOT** create public GitHub issues for security vulnerabilities.
-
-Instead, email: security@[company].com
-
-Include:
-- Description of the vulnerability
-- Steps to reproduce
-- Potential impact
-- Suggested mitigation (if any)
-
 ## Security Standards
 
 ### Authentication & Authorization
